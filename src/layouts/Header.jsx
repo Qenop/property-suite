@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useAuth } from '../auth/auth-context';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';  // Import Link from react-router-dom
 
 export default function Header() {
   const { logout } = useAuth();
@@ -32,28 +32,28 @@ export default function Header() {
       <nav className="hidden md:flex md:items-center md:space-x-8 md:ml-auto">
         <ul className="flex space-x-8 ml-auto">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-blue-600 hover:text-blue-800 px-4 py-2 rounded-md"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="text-blue-600 hover:text-blue-800 px-4 py-2 rounded-md"
             >
               Manage
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/selling"
+            <Link
+              to="/selling"
               className="text-blue-600 hover:text-blue-800 px-4 py-2 rounded-md"
             >
               Sell
-            </a>
+            </Link>
           </li>
           <li>
             <a
@@ -64,8 +64,6 @@ export default function Header() {
             </a>
           </li>
         </ul>
-
-        
       </nav>
 
       {/* Mobile menu: shown when menuOpen is true */}
@@ -74,28 +72,28 @@ export default function Header() {
       >
         <ul className="space-y-4 px-4">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-blue-600 hover:text-blue-800 block"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="text-blue-600 hover:text-blue-800 block"
             >
               Manage
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/selling"
+            <Link
+              to="/selling"
               className="text-blue-600 hover:text-blue-800 block"
             >
               Sell
-            </a>
+            </Link>
           </li>
           <li>
             <a
