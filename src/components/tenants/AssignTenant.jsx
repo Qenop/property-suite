@@ -29,7 +29,7 @@ export default function AssignTenant() {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/properties');
+        const response = await axios.get('https://pro-suite-server.onrender.com/api/properties');
         setProperties(response.data || []);
       } catch (error) {
         console.error('Failed to fetch properties:', error);
@@ -99,7 +99,7 @@ export default function AssignTenant() {
     try {
       setSubmitting(true);
       setMessage('');
-      const response = await axios.post('http://localhost:5000/api/leases', payload);
+      const response = await axios.post('https://pro-suite-server.onrender.com/api/leases', payload);
       setMessage('✅ Tenant assigned successfully!');
       console.log('Lease created:', response.data);
 
