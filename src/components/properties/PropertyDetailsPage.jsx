@@ -19,7 +19,8 @@ export default function PropertyDetailsPage() {
   const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/properties/${id}`)
+    // Update to use live URL for API
+    axios.get(`https://pro-suite-server.onrender.com/api/properties/${id}`)
       .then(res => setProperty(res.data))
       .catch(err => console.error('Error fetching property:', err))
       .finally(() => setLoading(false));
@@ -36,9 +37,8 @@ export default function PropertyDetailsPage() {
     { key: 'water',    label: 'Water Readings',  content: <WaterReadingsTab propertyId={id} /> },
     { key: 'invoices', label: 'Invoices',        content: <InvoicesTab propertyId={id} /> },
     { key: 'reports',  label: 'Reports',         content: <ReportsTab propertyId={id} /> },
-    { key: 'billing', label: 'Billing',        content: <BillingTab propertyId={id} /> },
-    { key: 'tenants', label: 'Tenants', content: <TenantsTab property={property} /> },
-    //{ key: 'tenants',  label: 'Tenants',         content: <TenantsTab propertyId={id} /> },
+    { key: 'billing', label: 'Billing',          content: <BillingTab propertyId={id} /> },
+    { key: 'tenants', label: 'Tenants',          content: <TenantsTab property={property} /> },
   ];
 
   // Find content for the active tab
@@ -46,7 +46,6 @@ export default function PropertyDetailsPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded shadow">
-
       {/* Tab Navigation */}
       <div className="border-b mb-4">
         <nav className="flex space-x-2 overflow-x-auto">
