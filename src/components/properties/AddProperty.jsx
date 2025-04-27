@@ -184,7 +184,7 @@ export default function AddProperty() {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/properties', payload);
+      const response = await axios.post('https://pro-suite-server.onrender.com/api/properties', payload);
       console.log('✅ Property saved:', response.data);
       alert('✅ Property submitted successfully!');
       setProperty(getInitialProperty());
