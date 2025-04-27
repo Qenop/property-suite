@@ -7,7 +7,8 @@ export default function PropertiesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/properties')
+    axios.get('https://pro-suite-server.onrender.com/api/properties')
+
       .then(res => setProperties(res.data))
       .catch(err => console.error('Error fetching properties:', err))
       .finally(() => setLoading(false));
