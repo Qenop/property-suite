@@ -35,18 +35,6 @@ export default function EditPropertyTab({ propertyId, closeTab }) {
         setLoading(false);
       });
   }, [propertyId]);
-  
-  /*useEffect(() => {
-    axios.get(`http://localhost:5000/api/properties/${propertyId}`)
-      .then(res => {
-        setProperty(res.data);
-      })
-      .catch(() => {
-        setError('Error loading property data');
-      })
-      .finally(() => setLoading(false));
-  }, [propertyId]);*/
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProperty((prev) => ({
@@ -147,8 +135,6 @@ export default function EditPropertyTab({ propertyId, closeTab }) {
           </div>
         ))}
       </div>
-
-
 
       {/* Service Rate */}
       <div className="mt-4">
