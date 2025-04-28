@@ -1,16 +1,3 @@
-// Example: OverviewTab.jsx
-/*import React from 'react';
-
-export default function OverviewTab({ property }) {
-  return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Overview</h2>
-      <pre className="bg-gray-100 p-4 rounded">
-        {JSON.stringify(property, null, 2)}
-      </pre>
-    </div>
-  );
-}*/
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -21,7 +8,7 @@ export default function OverviewTab() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/properties/${id}`)
+    axios.get(`https://pro-suite-server.onrender.com/api/properties/${id}`)
       .then(res => setProperty(res.data))
       .catch(err => console.error('Error fetching property:', err))
       .finally(() => setLoading(false));
