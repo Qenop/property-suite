@@ -22,7 +22,7 @@ export default function EditPropertyTab({ propertyId, closeTab }) {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/properties/${propertyId}`)
+    axios.get(`https://pro-suite-server.onrender.com/api/properties/${propertyId}`)
       .then((res) => {
         setProperty(res.data)
         setFormData(res.data);
