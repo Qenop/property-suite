@@ -196,7 +196,7 @@ export default function AddProperty() {
   };
 
   return (
-    <div className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-4xl mx-auto p-6 bg-white rounded shadow space-y-6">
+    <div className="w-full max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl mx-auto p-6 bg-white rounded shadow space-y-6">
       <h2 className="text-2xl font-bold">Add New Property</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -218,11 +218,26 @@ export default function AddProperty() {
 
           <select value={property.type} onChange={(e) => handleChange('type', e.target.value)}
             className="w-full border p-2 rounded">
-            <option value="">-- Select Property Type --</option>
+            <option value="">Select Property Type</option>
             <option value="residential">Residential</option>
             <option value="commercial">Commercial</option>
             <option value="mixed">Mixed Use</option>
           </select>
+        </div>
+
+        {/* Service Rate */}
+        <div className="space-y-2">
+          <label className="block font-medium">Service Rate Type</label>
+          <select value={property.serviceRate.type}
+            onChange={(e) => handleChange('serviceRate.type', e.target.value)}
+            className="w-full border p-2 rounded">
+            <option value="percentage">Percentage</option>
+            <option value="fixed">Fixed</option>
+          </select>
+          <input type="number" min="0" placeholder={property.serviceRate.type === 'percentage' ? 'Value (%)' : 'Amount (Kes.)'}
+            className="w-full border p-2 rounded"
+            value={property.serviceRate.value}
+            onChange={(e) => handleChange('serviceRate.value', e.target.value)} />
         </div>
 
         {/* Utility Billing */}
@@ -267,12 +282,12 @@ export default function AddProperty() {
                 value={property.utilities.electricity.amount}
                 onChange={(e) => handleChange('utilities.electricity.amount', e.target.value)} />
             )}
-            {property.utilities.electricity.billing === 'metered' && (
+            {/*property.utilities.electricity.billing === 'metered' && (
               <input type="number" min="0" placeholder="Cost per kWh (Kes./kWh)"
                 className="w-full border p-2 rounded"
                 value={property.utilities.electricity.costPerUnit}
                 onChange={(e) => handleChange('utilities.electricity.costPerUnit', e.target.value)} />
-            )}
+            )*/}
           </div>
 
           {/* Garbage */}
@@ -285,23 +300,11 @@ export default function AddProperty() {
           </div>
         </div>
 
-        {/* Service Rate */}
-        <div className="space-y-2">
-          <label className="block font-medium">Service Rate Type</label>
-          <select value={property.serviceRate.type}
-            onChange={(e) => handleChange('serviceRate.type', e.target.value)}
-            className="w-full border p-2 rounded">
-            <option value="percentage">Percentage</option>
-            <option value="fixed">Fixed</option>
-          </select>
-          <input type="number" min="0" placeholder={property.serviceRate.type === 'percentage' ? 'Value (%)' : 'Amount (Kes.)'}
-            className="w-full border p-2 rounded"
-            value={property.serviceRate.value}
-            onChange={(e) => handleChange('serviceRate.value', e.target.value)} />
-        </div>
+        
 
         {/* Payment & Contacts */}
         <div className="space-y-4">
+        <label className="block font-medium">Payment Details</label>
           <input type="text" placeholder="Payment Account Details"
             className="w-full border p-2 rounded"
             value={property.paymentAccount}
