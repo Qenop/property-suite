@@ -376,7 +376,7 @@ export default function AddProperty() {
                     onChange={(e) => updateUnitNumber(index, numIndex, e.target.value)}
                   />
                   <select
-                    className="w-40 border p-2 rounded"
+                    className="flex-1 border p-2 rounded"
                     value={unitNumber.status}
                     onChange={(e) => updateUnitStatus(index, numIndex, e.target.value)}
                   >
