@@ -196,7 +196,7 @@ export default function AddProperty() {
   };
 
   return (
-    <div className="w-full max-w-sm md:max-w-md xl:max-w-4xl mx-auto p-5 bg-white rounded shadow space-y-5">
+    <div className="w-full max-w-sm md:max-w-lg xl:max-w-4xl mx-auto p-5 bg-white rounded shadow space-y-5">
       <h2 className="text-xl font-bold">Add New Property</h2>
 
       <form onSubmit={handleSubmit} className="space-y-5">
