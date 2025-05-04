@@ -382,7 +382,7 @@ export default function AddProperty() {
                   <input
                     type="text"
                     placeholder={`Unit Number ${numIndex + 1}`}
-                    className="flex-1 border p-2 rounded"
+                    className="flex-[2] border p-2 rounded"
                     value={unitNumber.number}
                     onChange={(e) => updateUnitNumber(index, numIndex, e.target.value)}
                   />
