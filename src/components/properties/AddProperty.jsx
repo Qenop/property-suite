@@ -196,7 +196,7 @@ export default function AddProperty() {
   };
 
   return (
-    <div className="w-full max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl mx-auto p-6 bg-white rounded shadow space-y-6">
+    <div className="w-full max-w-sm md:max-w-md lg:max-w-xl xl:max-w-4xl mx-auto p-6 bg-white rounded shadow space-y-6">
       <h2 className="text-2xl font-bold">Add New Property</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -378,7 +378,7 @@ export default function AddProperty() {
 
 
               {unit.unitNumbers.map((unitNumber, numIndex) => (
-                <div key={numIndex} className="flex items-center">
+                <div key={numIndex} className="flex items-center gap-1">
                   <input
                     type="text"
                     placeholder={`Unit Number ${numIndex + 1}`}
