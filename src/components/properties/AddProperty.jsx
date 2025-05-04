@@ -367,7 +367,7 @@ export default function AddProperty() {
 
 
               {unit.unitNumbers.map((unitNumber, numIndex) => (
-                <div key={numIndex} className="flex gap-2 items-center">
+                <div key={numIndex} className="flex-[2] items-center">
                   <input
                     type="text"
                     placeholder={`Unit Number ${numIndex + 1}`}
