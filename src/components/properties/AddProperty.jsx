@@ -309,15 +309,15 @@ export default function AddProperty() {
             <div>
               <h4 className="font-semibold">Landlord</h4>
               <input type="text" placeholder="Name"
-                className="w-full border py-2 px-2 rounded"
+                className="w-full border p-2 rounded"
                 value={property.landlord.name}
                 onChange={(e) => handleChange('landlord.name', e.target.value)} />
               <input type="tel" placeholder="Phone"
-                className="w-full border py-2 px-2 rounded"
+                className="w-full border p-2 rounded"
                 value={property.landlord.phone}
                 onChange={(e) => handleChange('landlord.phone', e.target.value)} />
               <input type="email" placeholder="Email"
-                className="w-full border py-2 px-2 rounded"
+                className="w-full border p-2 rounded"
                 value={property.landlord.email}
                 onChange={(e) => handleChange('landlord.email', e.target.value)} />
             </div>
@@ -376,13 +376,13 @@ export default function AddProperty() {
                 <div key={numIndex} className="flex items-center gap-1">
                   <input
                     type="text"
-                    placeholder={`Unit No. `}
-                    className="flex-2 border p-2 rounded"
+                    placeholder={`Unit No.`}
+                    className="flex-[2] border p-2 rounded"
                     value={unitNumber.number}
                     onChange={(e) => updateUnitNumber(index, numIndex, e.target.value)}
                   />
                   <select
-                    className="flex-2 border p-2 rounded"
+                    className="flex-[2] border p-2 rounded"
                     value={unitNumber.status}
                     onChange={(e) => updateUnitStatus(index, numIndex, e.target.value)}
                   >
