@@ -282,12 +282,7 @@ export default function AddProperty() {
                 value={property.utilities.electricity.amount}
                 onChange={(e) => handleChange('utilities.electricity.amount', e.target.value)} />
             )}
-            {/*property.utilities.electricity.billing === 'metered' && (
-              <input type="number" min="0" placeholder="Cost per kWh (Kes./kWh)"
-                className="w-full border p-2 rounded"
-                value={property.utilities.electricity.costPerUnit}
-                onChange={(e) => handleChange('utilities.electricity.costPerUnit', e.target.value)} />
-            )*/}
+            
           </div>
 
           {/* Garbage */}
@@ -314,15 +309,15 @@ export default function AddProperty() {
             <div>
               <h4 className="font-semibold">Landlord</h4>
               <input type="text" placeholder="Name"
-                className="w-full border p-2 rounded"
+                className="w-full border py-2 px-2 rounded"
                 value={property.landlord.name}
                 onChange={(e) => handleChange('landlord.name', e.target.value)} />
               <input type="tel" placeholder="Phone"
-                className="w-full border p-2 rounded"
+                className="w-full border py-2 px-2 rounded"
                 value={property.landlord.phone}
                 onChange={(e) => handleChange('landlord.phone', e.target.value)} />
               <input type="email" placeholder="Email"
-                className="w-full border p-2 rounded"
+                className="w-full border py-2 px-2 rounded"
                 value={property.landlord.email}
                 onChange={(e) => handleChange('landlord.email', e.target.value)} />
             </div>
