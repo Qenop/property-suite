@@ -354,7 +354,7 @@ export default function AddProperty() {
               <select value={unit.type}
                 onChange={(e) => handleChange(`units.${index}.type`, e.target.value)}
                 className="w-full border p-2 rounded">
-                <option value="">-- Select Unit Type --</option>
+                <option value="">Select Unit Type</option>
                 {unitTypes.map(type => (
                   <option key={type} value={type}>{type.toUpperCase()}</option>
                 ))}
@@ -381,13 +381,13 @@ export default function AddProperty() {
                 <div key={numIndex} className="flex items-center gap-1">
                   <input
                     type="text"
-                    placeholder={`Unit Number ${numIndex + 1}`}
-                    className="flex-[2] border p-2 rounded"
+                    placeholder={`Unit No. `}
+                    className="flex-2 border p-2 rounded"
                     value={unitNumber.number}
                     onChange={(e) => updateUnitNumber(index, numIndex, e.target.value)}
                   />
                   <select
-                    className="flex-1 border p-2 rounded"
+                    className="flex-2 border p-2 rounded"
                     value={unitNumber.status}
                     onChange={(e) => updateUnitStatus(index, numIndex, e.target.value)}
                   >
