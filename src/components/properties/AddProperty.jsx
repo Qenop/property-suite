@@ -318,6 +318,10 @@ export default function AddProperty() {
                 className="w-full border p-2 rounded"
                 value={property.landlord.phone}
                 onChange={(e) => handleChange('landlord.phone', e.target.value)} />
+              <input type="email" placeholder="Email"
+                className="w-full border p-2 rounded"
+                value={property.landlord.email}
+                onChange={(e) => handleChange('landlord.email', e.target.value)} />
             </div>
             <div>
               <h4 className="font-semibold">Caretaker</h4>
@@ -329,6 +333,10 @@ export default function AddProperty() {
                 className="w-full border p-2 rounded"
                 value={property.caretaker.phone}
                 onChange={(e) => handleChange('caretaker.phone', e.target.value)} />
+              <input type="email" placeholder="Email"
+                className="w-full border p-2 rounded"
+                value={property.caretaker.email}
+                onChange={(e) => handleChange('caretaker.email', e.target.value)} />
             </div>
           </div>
         </div>
