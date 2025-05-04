@@ -378,16 +378,16 @@ export default function AddProperty() {
 
 
               {unit.unitNumbers.map((unitNumber, numIndex) => (
-                <div key={numIndex} className="flex items-center gap-1">
+                <div key={numIndex} className="flex items-center">
                   <input
                     type="text"
                     placeholder={`Unit Number ${numIndex + 1}`}
-                    className="flex-[2] border p-2 rounded"
+                    className="flex-1 border p-2 rounded"
                     value={unitNumber.number}
                     onChange={(e) => updateUnitNumber(index, numIndex, e.target.value)}
                   />
                   <select
-                    className="flex-[2] border p-2 rounded"
+                    className="flex-1 border p-2 rounded"
                     value={unitNumber.status}
                     onChange={(e) => updateUnitStatus(index, numIndex, e.target.value)}
                   >
