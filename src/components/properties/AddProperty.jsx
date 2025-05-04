@@ -196,10 +196,10 @@ export default function AddProperty() {
   };
 
   return (
-    <div className="w-full max-w-sm md:max-w-md xl:max-w-4xl mx-auto p-6 bg-white rounded shadow space-y-6">
+    <div className="w-full max-w-sm md:max-w-md xl:max-w-4xl mx-auto p-5 bg-white rounded shadow space-y-5">
       <h2 className="text-xl font-bold">Add New Property</h2>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-5">
         {formErrors.length > 0 && (
           <div className="bg-red-100 text-red-700 p-4 rounded space-y-1">
             {formErrors.map((err, i) => <p key={i}>• {err}</p>)}
